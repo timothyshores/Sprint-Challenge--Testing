@@ -1,9 +1,9 @@
 const db = require('../data/dbConfig.js');
 const Games = require('./games-model.js');
 
-describe('users-model', () => {
+describe('games-model', () => {
     afterEach(async () => {
-        await db('users').truncate();
+        await db('games').truncate();
     });
 
     describe('insert()', () => {
