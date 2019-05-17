@@ -7,8 +7,9 @@ describe('games-model', () => {
     });
 
     describe('get', () => {
-        it('should return a list of ', () => {
-
+        it('should return a 200 HTTP reponse ', async () => {
+            const res = await Games.get('/');
+            expect(res.status).toBe(200);
         });
     });
 
