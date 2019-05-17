@@ -6,6 +6,12 @@ describe('games-model', () => {
         await db('games').truncate();
     });
 
+    describe('get', () => {
+        it('should return a list of ', () => {
+
+        });
+    });
+
     describe('insert()', () => {
         it('should insert a new game with title and genre', async () => {
             let game = await Games.insert({ title: 'Pacman', genre: 'Arcade' });
