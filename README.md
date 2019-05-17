@@ -24,31 +24,39 @@ In this challenge use `Test Driven Development` to build a RESTful API using Nod
 
 Demonstrate your understanding of this week's concepts by answering the following free-form questions. Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager.
 
-1. In Jest, what are the differences between `describe()` and `it()` globals, and what are good uses for them?
-1. What is the point of `Test Driven Development`? What do you think about this approach?
-1. Mention three types of automated tests.
+Q1: In Jest, what are the differences between `describe()` and `it()` globals, and what are good uses for them?
+
+A1: *Describe() breaks the tes suit into components and it() are the individual unit tests. As an example a HTTP GET request to /games would describe GET /games and then the individual it tests are it responses with status code 200, it returns an object containing an array, each array in the object contains the following keys, etc.*
+
+Q2: What is the point of `Test Driven Development`? What do you think about this approach?
+
+A2: *TDD makes you focus on the requirements before coding and it reduces bugs. It depends on the project. Do the stakeholders for the project want the project to be completed very fast or is the deadline for the project including time for testing and documentation*
+
+Q3: Mention three types of automated tests.
+
+A3: Unit testing, inegration testing and snapshot testing
 
 ## Project Set Up
 
-- [ ] Fork and clone this repository.
-- [ ] **CD into the folder** where you downloaded the repository.
-- [ ] Run `yarn` or `npm i` to download all dependencies.
-- [ ] Type `yarn test` or `npm test` to run the tests. The `test` script is already configured.
+- [✅] Fork and clone this repository.
+- [✅] **CD into the folder** where you downloaded the repository.
+- [✅] Run `yarn` or `npm i` to download all dependencies.
+- [✅] Type `yarn test` or `npm test` to run the tests. The `test` script is already configured.
 
 ## Minimum Viable Product
 
 Your finished project must include all of the following requirements:
 
-- [ ] Use `jest` and `supertest` to write the tests.
-- [ ] Write the **tests BEFORE** writing the route handlers.
-- [ ] Your API must have both `POST` and `GET` endpoints for `/games`.
-- [ ] Write a **minimum** of three tests per endpoint.
+- [✅] Use `jest` and `supertest` to write the tests.
+- [✅] Write the **tests BEFORE** writing the route handlers.
+- [✅] Your API must have both `POST` and `GET` endpoints for `/games`.
+- [✅] Write a **minimum** of three tests per endpoint.
 
 Below is a product specification covering the requirements for your endpoints.
 
 ### POST /games
 
-- [ ] The `POST /games` endpoint should take in an object that looks like this
+- [✅] The `POST /games` endpoint should take in an object that looks like this
 
   ```js
   {
@@ -58,13 +66,13 @@ Below is a product specification covering the requirements for your endpoints.
   }
   ```
 
-- [ ] In the route handler, validate that the required fields are included inside the body. If the information is incomplete, return a `422` status code.
-- [ ] Write tests to verify that the endpoint returns the correct HTTP status code when receiving correct and incorrect game data.
+- [✅] In the route handler, validate that the required fields are included inside the body. If the information is incomplete, return a `422` status code.
+- [✅] Write tests to verify that the endpoint returns the correct HTTP status code when receiving correct and incorrect game data.
 
 ### GET /games
 
-- [ ] The `GET /games` endpoint should return the list of games and HTTP status code 200.
-- [ ] Write a test to make sure this endpoint always returns an array, even if there are no games stored. If there are no games to return, the endpoint should return an empty array.
+- [✅] The `GET /games` endpoint should return the list of games and HTTP status code 200.
+- [✅] Write a test to make sure this endpoint always returns an array, even if there are no games stored. If there are no games to return, the endpoint should return an empty array.
 
 ## Stretch Problems
 
@@ -76,6 +84,3 @@ The following exercises are optional, but we suggest that you tackle them if you
   - Add a `DELETE /games/:id` endpoint that can remove the corresponding game. If the game does not exist return a 404 status code. Write tests for this endpoint.
 
 **Remember you can use any resources you want to solve these problems, but avoid copying/pasting solutions you've previously written. Also if you don't finish all of the challenges, that's fine! Just do what you can and submit your challenges in the end! HAVE FUN!**
-
-
-
